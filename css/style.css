@@ -1,0 +1,43 @@
+/* General Styles */
+
+
+* {
+    font-family: sans-serif;
+}
+
+/* Header Styles */
+
+header {
+    background: #9970f8;
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.app-logo-text,
+.username {
+    font-weight: 100;
+}
+
+.avatar {
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+}
+
+.current-user {
+    border-left: solid 1px white;
+}
+
+.header-info {
+    display: flex;
+    align-items: center;
+}
+
+.notification-bell,
+.header-title,
+.header-info,
+.avatar {
+    margin: auto 10px;
+}
