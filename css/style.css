@@ -7,6 +7,11 @@
     margin: 0;
 }
 
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
 h1 {
     font-size: 1.4rem;
 }
@@ -80,3 +85,7 @@ header {
     font-weight: 200;
     color: rgb(114, 114, 114);
 }
+
+/* Traffic Chart Styles */
+
+.traffic-header {color: rgb(114, 114, 114)}
