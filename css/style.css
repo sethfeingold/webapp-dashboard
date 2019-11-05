@@ -3,7 +3,8 @@
 
 * {
     font-family: sans-serif;
-    margin: 0 auto;
+    box-sizing: border-box;
+    margin: 0;
 }
 
 /* Header Styles */
@@ -52,4 +53,19 @@ header {
     align-items: center;
     justify-content: space-around;
     padding: 20px;
+}
+
+/* Main Header and Search Bar Styles */
+
+.main-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    outline: solid 1px black;
+}
+
+.headline {
+    font-weight: 200;
+    color: rgb(114, 114, 114);
 }
