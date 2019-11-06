@@ -113,3 +113,17 @@ header {
 .traffic-chart-container {
     outline: solid 1px black;
 }
+
+/* Daily Traffic Bar Graph Styles */
+
+.daily-traffic h3 {
+    margin: 20px;
+    color: rgb(114, 114, 114);
+}
+
+/* Mobile Users Donut Graph Styles */
+
+.mobile-users h3 {
+    margin: 20px;
+    color: rgb(114, 114, 114);
+}
