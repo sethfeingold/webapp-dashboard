@@ -23,6 +23,11 @@ h3 {
     font-size: 1rem;
 }
 
+.section-header {
+    margin: 20px;
+    color: rgb(114, 114, 114);
+}
+
 /* Header Styles */
 
 header {
@@ -116,14 +121,47 @@ header {
 
 /* Daily Traffic Bar Graph Styles */
 
-.daily-traffic h3 {
-    margin: 20px;
-    color: rgb(114, 114, 114);
-}
+
 
 /* Mobile Users Donut Graph Styles */
 
-.mobile-users h3 {
-    margin: 20px;
-    color: rgb(114, 114, 114);
+
+
+/* Social Stats Section Styles */
+
+#social-stats-container {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100vw;
+}
+
+.social-media-container {
+    display: flex;
+    border: solid 1px black;
+    border-radius: 5px;
+    padding: 2px;
+    width: 30%;
+    justify-content: space-evenly;
+}
+
+.social-media-logo {
+    padding: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-media-stats {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 2px;
+}
+
+.social-network-name {
+    font-size: .7rem;
+}
+
+.social-network-numbers {
+    font-size: 1.1rem;
 }
