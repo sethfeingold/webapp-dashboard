@@ -115,10 +115,19 @@
                     <li class="traffic-nav-link">Monthly</li>
                 </ul>
             </div>
-            <div class="traffic-chart-container">
-                <!-- Canvas for line graph, JS will handle the chart itself -->
-                <canvas id="traffic-chart">
-                </canvas>
+            <div class="chart-container-full">
+                <!-- Canvas for line graph, to be handled by Chart.js -->
+                <canvas id="traffic-chart"></canvas>
+            </div>
+        </section>
+
+        <!-- Daily Traffic Bar Graph -->
+
+        <section class="daily-traffic">
+            <h3>Daily Traffic</h3>
+            <div class="chart-container-half">
+                <!-- Canvas for bar graph, to be handled by Chart.js -->
+                <canvas id="daily-traffic-chart"></canvas>
             </div>
         </section>
 
