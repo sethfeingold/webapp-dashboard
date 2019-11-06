@@ -145,7 +145,7 @@ header {
 }
 
 .social-media-logo {
-    padding: 2px;
+    padding: 4px 2px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -155,13 +155,40 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    padding: 2px;
+    padding: 4px 2px;
 }
 
 .social-network-name {
     font-size: .7rem;
+    color: #573a9b;
 }
 
 .social-network-numbers {
     font-size: 1.1rem;
+}
+
+/* New Members Section Styling */
+
+#new-members {
+    margin: 20px;
+}
+
+.member {
+    margin: 15px;
+}
+
+.member-name, .date {
+    font-size: .8rem;
+    color: rgb(114, 114, 114);
+}
+
+.member-email {
+    color: #573a9b;
+    text-decoration: none;
+    font-size: .8rem;
+}
+
+.member-info-container {
+    display: flex;
+    justify-content: space-between;
 }
