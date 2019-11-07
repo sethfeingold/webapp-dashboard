@@ -76,6 +76,12 @@ header {
     padding: 20px;
 }
 
+.traffic-nav-link:hover {
+    cursor: pointer;
+    opacity: .8;
+    color: #573a9b;
+}
+
 /* Main Header and Search Bar Styles */
 
 .main-header {
