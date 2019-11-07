@@ -167,10 +167,14 @@ header {
     font-size: 1.1rem;
 }
 
-/* New Members Section Styling */
+/* New Members Section Styling & Recent Activity */
 
-#new-members {
+#new-members, #recent-activity {
     margin: 20px;
+}
+
+#new-members h3, #recent-activity h3 {
+    color: rgb(114, 114, 114);
 }
 
 .member {
@@ -191,4 +195,10 @@ header {
 .member-info-container {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+}
+
+.time-stamp {
+    color: rgb(114, 114, 114);
+    font-size: .7rem;
 }
