@@ -7,7 +7,7 @@
     <title>WebApp Dashboard</title>
     <link type="text/css" rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body class="grid-container">
 
     <!-- HEADER -->
 
@@ -65,37 +65,37 @@
     <!-- NAVBAR -->
 
     <nav class="navbar">
+        <div id="nav-container">
+            <a href="#" class="nav-link active">
+                <img class="nav-icon" src="icons/icon-dashboard.svg" height="25px" width="25px" alt="dashboard icon">
+            </a>
 
-        <a href="#" class="nav-link active">
-            <img class="nav-icon" src="icons/icon-dashboard.svg" height="25px" width="25px" alt="dashboard icon">
-        </a>
+            <a href="#" class="nav-link">
+                <img class="nav-icon" src="icons/icon-members.svg" height="25px" width="25px" alt="member icon">
+            </a>
 
-        <a href="#" class="nav-link">
-            <img class="nav-icon" src="icons/icon-members.svg" height="25px" width="25px" alt="member icon">
-        </a>
+            <a href="#" class="nav-link">
+                <img class="nav-icon" src="icons/icon-visits.svg" height="25px" width="25px" alt="chart icon">
+            </a>
 
-        <a href="#" class="nav-link">
-            <img class="nav-icon" src="icons/icon-visits.svg" height="25px" width="25px" alt="chart icon">
-        </a>
-
-        <a href="#" class="nav-link">
-            <img class="nav-icon" src="icons/icon-settings.svg" height="25px" width="25px" alt="settings icon">
-        </a>
-
+            <a href="#" class="nav-link">
+                <img class="nav-icon" src="icons/icon-settings.svg" height="25px" width="25px" alt="settings icon">
+            </a>
+        </div>
     </nav>
 
     <!-- MAIN CONTENT -->
 
     <main class="main-content">
 
-        <div class="main-header">
+        <section class="main-header" id="headline">
             <div>
                 <h2 class="headline">Dashboard</h2>
             </div>
             <div class="searchbar">
-                <input type="search" id="searchbox" placeholder="Search.." />
+                <input type="search" id="searchbox" placeholder="Search.."/>
             </div>
-        </div>
+        </section>
 
         <!-- Alert Banner -->
 
@@ -141,7 +141,9 @@
             </div>
         </section>
 
-        <div class="social-stats">
+        <!-- Social Media Stats -->
+
+        <section class="social-stats">
             <h3 class="section-header">Social Stats</h3>
             <div id="social-stats-container">
 
@@ -225,7 +227,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
 
         <!-- New Members Section -->
 
@@ -416,6 +418,5 @@
             </div>
         </section>
     </main>
-
 </body>
 </html>

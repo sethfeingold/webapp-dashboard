@@ -36,7 +36,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px;
+    padding: 10px 0px;
 }
 
 .app-logo-text,
@@ -70,10 +70,15 @@ header {
 
 .navbar {
     background: #573a9b;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
     padding: 20px;
+}
+
+#nav-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 500px;
 }
 
 .traffic-nav-link:hover {
@@ -213,9 +218,7 @@ header {
 /* User Message Styling */
 
 .form-container {
-    width: 90%;
-    margin: 20px auto;
-    align-self: center;
+    margin: 20px;
 }
 
 .message-form {
@@ -253,10 +256,12 @@ header {
 /* Settings Section Styling */
 
 .settings-container {
-    margin: 20px auto;
+    margin: 20px;
     color: rgb(114, 114, 114);
-    width: 90%;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-content: flex-end;
 }
 
 #timezone, .save-button, .cancel-button {
@@ -272,11 +277,7 @@ header {
 .save-button, .cancel-button {
     width: 49%;
     padding: 10px 10px;
-}
-
-.settings-buttons-container {
-    display: flex;
-    justify-content: space-between;
+   
 }
 
 .save-button {
@@ -297,3 +298,89 @@ header {
     cursor: pointer;
     opacity: .8;
 }
+
+/* CSS Grid */
+
+.header {
+    grid-area: header;
+}
+
+.navbar{
+    grid-area: nav;
+}
+
+.main-content {
+    grid-area: main;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+    grid-template-areas: 
+        "header"
+        "nav"
+        "main";
+}
+
+/* Media Queries for Tablet and Desktop Viewing */
+
+@media (min-width: 768px) {
+    .grid-container {
+        grid-template-columns: 55px 1fr;
+        grid-template-areas: 
+            "header header"
+            "nav main";
+    }
+
+    #nav-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-icon {
+        margin-top: 3rem;
+    }
+    
+    .main-content {
+        display: grid;
+        grid-template-columns: 50%;
+    }
+
+    .main-header, .traffic, .social-stats {
+        grid-column: 1 / span 2;
+    }
+
+    .daily-traffic, #new-members, .message {
+        grid-column: 1 / span 1;
+    }
+
+    .mobile-users, #recent-activity, .settings {
+        grid-column: 2 / span 1;
+    }
+}
+
+/* @media (min-width: 768px) {
+    .grid-container {
+        display: grid;
+        grid-template-columns: 50px repeat(auto-fit, minmax(250px, 1fr));
+        grid-template-areas: 
+        "header header header"
+        "nav headline headline"
+        "nav traffic traffic"
+        "nav dailyTraffic mobileUsers"
+        "nav socialStats socialStats"
+        "nav newMembers recentActivity"
+        "nav message settings";
+        width: 100%;
+    }
+
+    #nav-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-icon {
+        margin-top: 3rem;
+    }
+} */
