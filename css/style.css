@@ -130,6 +130,10 @@ header {
     outline: solid 1px black;
 }
 
+.chart-container-full, .chart-container-half {
+    width: 95vw;
+}
+
 /* Daily Traffic Bar Graph Styles */
 
 
@@ -143,7 +147,7 @@ header {
 #social-stats-container {
     display: flex;
     justify-content: space-evenly;
-    width: 100vw;
+    width: 100%;
 }
 
 .social-media-container {
@@ -358,6 +362,15 @@ header {
     .mobile-users, #recent-activity, .settings {
         grid-column: 2 / span 1;
     }
+
+    .chart-container-full {
+        width: 90vw;
+    }
+
+    .chart-container-half {
+        width: 45vw;
+    }
+
 }
 
 /* @media (min-width: 768px) {
