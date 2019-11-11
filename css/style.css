@@ -302,7 +302,8 @@ header {
 
 #timezone {
     width: 100%;
-    height: 30px;
+    height: 35px;
+    border: 1px solid rgb(114, 114, 114);
 }
 
 .save-button, .cancel-button {
@@ -400,5 +401,19 @@ header {
 
     .social-stats {
         margin: 20px 0;
+    }
+
+    .settings-container {
+        height: 198px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #timezone {
+        margin-top: 10px;
+    }
+
+    #timezone, .save-button, .cancel-button {
+        margin-bottom: 0;
     }
 }
