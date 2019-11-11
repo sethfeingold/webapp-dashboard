@@ -87,6 +87,35 @@ header {
     color: #573a9b;
 }
 
+@keyframes shake {
+    10%, 30%, 50%, 70% {
+        transform: rotate(-8deg);
+    }
+    20%, 40%, 60%, 80% {
+        transform: rotate(8deg);
+    }
+}
+
+.bell-icon:hover {
+    cursor: pointer;
+    transform-origin: 50% 0;
+    animation: shake .6s ease-out;
+}
+
+.notification-bell {
+    position: relative;
+}
+
+.bell-indicator {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: #64fc64;
+    top: -2px;
+    right: -4px;
+}
+
 /* Main Header and Search Bar Styles */
 
 .main-header {
