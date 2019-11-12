@@ -447,3 +447,22 @@ header {
         margin-bottom: 0;
     }
 }
+
+@media (min-width: 1024px) {
+
+    .social-network-name {
+        font-size: 1rem;
+    }
+
+    .social-network-numbers {
+        font-size: 1.5rem;
+    }
+
+    #messageField {
+        height: 95px;
+    }
+
+    .member-name, .save-button, .cancel-button, #sendButton {
+        font-size: 1rem;
+    }
+}
