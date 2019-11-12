@@ -190,6 +190,10 @@ header {
     width: 95vw;
 }
 
+.traffic {
+    margin: 20px;
+}
+
 /* Daily Traffic Bar Graph Styles */
 
 
@@ -446,6 +450,10 @@ header {
     #timezone, .save-button, .cancel-button {
         margin-bottom: 0;
     }
+
+    #searchbox {
+        width: 300px;
+    }
 }
 
 @media (min-width: 1024px) {
@@ -464,5 +472,9 @@ header {
 
     .member-name, .save-button, .cancel-button, #sendButton {
         font-size: 1rem;
+    }
+
+    #searchbox {
+        width: 500px;
     }
 }
