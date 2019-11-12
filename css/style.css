@@ -187,7 +187,8 @@ header {
 }
 
 .chart-container-full, .chart-container-half {
-    width: 95vw;
+    width: 90vw;
+    margin: 0 auto;
 }
 
 .traffic {
@@ -396,6 +397,7 @@ header {
 /* Media Queries for Tablet and Desktop Viewing */
 
 @media (min-width: 768px) {
+
     .grid-container {
         grid-template-columns: 55px 1fr;
         grid-template-areas: 
@@ -434,7 +436,7 @@ header {
     }
 
     .chart-container-half {
-        width: 45vw;
+        width: 40vw;
     }
 
     .social-stats {
