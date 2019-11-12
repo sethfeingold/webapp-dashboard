@@ -196,11 +196,15 @@ header {
 
 /* Daily Traffic Bar Graph Styles */
 
-
+.daily-traffic {
+    margin: 20px;
+}
 
 /* Mobile Users Donut Graph Styles */
 
-
+.mobile-users {
+    margin: 20px;
+}
 
 /* Social Stats Section Styles */
 
