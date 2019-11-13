@@ -378,7 +378,7 @@ header {
 }
 
 .switch-light {
-    width: 70%;
+    width: 200px;
 }
 
 .setting-text {
@@ -488,7 +488,7 @@ header {
     #searchbox {
         width: 500px;
     }
-    
+
     #userField, #messageField, #sendButton {
         margin-top: 25px;
     }
