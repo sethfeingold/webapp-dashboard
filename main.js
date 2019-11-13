@@ -5,6 +5,9 @@ const mobileCanvas = document.getElementById("mobile-users-chart");
 const user = document.getElementById("userField");
 const message = document.getElementById("messageField");
 const send = document.getElementById("sendButton");
+const notificationBell = document.getElementById("bell-icon");
+const notificationTray = document.getElementById("notifications");
+const bellIndicator = document.getElementById("bell-indicator");
 
 // Traffic Data Line Chart
 
@@ -101,6 +104,32 @@ let mobileChart = new Chart(mobileCanvas, {
     type: 'doughnut',
     data: mobileData,
     options: mobileOptions
+});
+
+// Notifications
+
+notificationBell.addEventListener('click', () => {
+    notificationTray.innerHTML = 
+    `
+    <span class="notification-tray-close">X</span>
+    <p class="notification-text">You are now friends with Dan Oliver</p>
+    <p class="notification-text">You have 2 new messages</p>
+    `
+    notificationTray.style.position = "absolute";
+    notificationTray.style.zIndex = 10;
+    notificationTray.style.border = "2px solid #573a9b";
+    notificationTray.style.borderRadius = "5px";
+    notificationTray.style.background = "white";
+    notificationTray.style.padding = "20px";
+    notificationTray.style.color = "rgb(114, 114, 114)";
+    bellIndicator.style.display = "none";
+});
+
+notificationTray.addEventListener('click', e => {
+    const element = e.target;
+    if (element.classList.contains("notification-tray-close")) {
+        notificationTray.style.display = "none";
+    }
 });
 
 // Alert
