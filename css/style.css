@@ -394,6 +394,10 @@ header {
     width: 200px;
 }
 
+.switch-light:hover {
+    cursor: pointer;
+}
+
 .setting-text {
     padding: 10px;
 }
