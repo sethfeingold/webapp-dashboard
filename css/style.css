@@ -192,7 +192,13 @@ header {
 }
 
 .traffic-nav li {
-    margin-left: 10px;
+    margin-left: 5px;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.traffic-nav li:hover {
+    cursor: pointer;
 }
 
 .traffic-chart-container {
@@ -206,6 +212,11 @@ header {
 
 .traffic {
     margin: 20px;
+}
+
+.active, .active:hover {
+    background: #4abe4a;
+    color: white;
 }
 
 /* Daily Traffic Bar Graph Styles */

@@ -8,8 +8,20 @@ const send = document.getElementById("sendButton");
 const notificationBell = document.getElementById("bell-icon");
 const notificationTray = document.getElementById("notifications");
 const bellIndicator = document.getElementById("bell-indicator");
+const trafficLI = document.getElementsByClassName("traffic-nav-link");
+const trafficNav = document.getElementById("trafficNav");
 
 // Traffic Data Line Chart
+
+
+trafficNav.addEventListener('click', (e) => {
+    for (let i=0; i< trafficLI.length;i++) {
+        trafficLI[i].classList.remove("active");
+    }
+    if (e.target.classList.contains("traffic-nav-link")) {
+        e.target.classList += " active";
+    }
+});
 
 let trafficData = {
     labels: ["16-22", "23-29", "30-5", "6-12", "13-19", "20-26", "27-3", "4-10", "11-17", "18-24", "25-31"],
@@ -42,6 +54,19 @@ let trafficChart = new Chart(trafficCanvas, {
     data: trafficData,
     options: trafficOptions
 });
+
+//traffic chart selections
+
+trafficNav.addEventListener('click', (e) => {
+    for (let i=0; i< trafficLI.length;i++) {
+        trafficLI[i].classList.remove("active");
+    }
+    if (e.target.classList.contains("traffic-nav-link")) {
+        e.target.classList += " active";
+    }
+});
+
+
 
 // Daily Traffic Bar Chart
 
