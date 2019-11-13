@@ -1,7 +1,10 @@
-const alert = document.getElementById("alert");
+const pageAlert = document.getElementById("alert");
 const trafficCanvas = document.getElementById("traffic-chart");
 const dailyCanvas = document.getElementById("daily-traffic-chart");
 const mobileCanvas = document.getElementById("mobile-users-chart");
+const user = document.getElementById("userField");
+const message = document.getElementById("messageField");
+const send = document.getElementById("sendButton");
 
 // Traffic Data Line Chart
 
@@ -102,7 +105,7 @@ let mobileChart = new Chart(mobileCanvas, {
 
 // Alert
 
-alert.innerHTML =
+pageAlert.innerHTML =
     `
     <div class="alert-banner">
         <p><strong>Alert:</strong> You have <strong>6</strong> overdue tasks to complete</p>
@@ -110,9 +113,23 @@ alert.innerHTML =
     </div>
     `;
 
-alert.addEventListener('click', e => {
+pageAlert.addEventListener('click', e => {
     const element = e.target;
     if (element.classList.contains("alert-banner-close")) {
-        alert.style.display = "none";
+        pageAlert.style.display = "none";
+    }
+});
+
+// Messaging form submittal validation
+
+send.addEventListener('click', () => {
+    if (user.value === "" && message.value === "") {
+    alert("Please fill out user and message fields before sending");
+    } else if (user.value === "" ) {
+    alert("Please fill out user field before sending");
+    } else if (message.value === "" ) {
+    alert("Please fill out message field before sending");
+    } else {
+    alert(`Message successfully sent to: ${user.value}`);
     }
 });
