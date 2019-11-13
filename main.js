@@ -13,16 +13,6 @@ const trafficNav = document.getElementById("trafficNav");
 
 // Traffic Data Line Chart
 
-
-trafficNav.addEventListener('click', (e) => {
-    for (let i=0; i< trafficLI.length;i++) {
-        trafficLI[i].classList.remove("active");
-    }
-    if (e.target.classList.contains("traffic-nav-link")) {
-        e.target.classList += " active";
-    }
-});
-
 let trafficData = {
     labels: ["16-22", "23-29", "30-5", "6-12", "13-19", "20-26", "27-3", "4-10", "11-17", "18-24", "25-31"],
     datasets: [{
@@ -35,7 +25,7 @@ let trafficData = {
 let trafficOptions = {
     aspectRatio: 2.5,
     animation: {
-        duration: 0
+        duration: 800
     },
     scales: {
         yAxes: [{
@@ -62,7 +52,25 @@ trafficNav.addEventListener('click', (e) => {
         trafficLI[i].classList.remove("active");
     }
     if (e.target.classList.contains("traffic-nav-link")) {
-        e.target.classList += " active";
+        e.target.classList += " active";}
+    for (let i=0; i<trafficLI.length; i++){
+    if(e.target.id === "hourlyButton") {
+        trafficData.labels = ["7am", "8am", "9am", "10am", "11am", "12pm", "1pm", "2pm", "3pm", "4pm", "6pm", "7pm"];
+        trafficData.datasets[0].data = [1100, 850, 1050, 900, 1800, 1300, 1250, 1650, 1750, 1550, 1700, 2300];
+        trafficChart.update();
+    } else if (e.target.id === "dailyButton") {
+        trafficData.labels = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday"];
+        trafficData.datasets[0].data = [600, 950, 1150, 650, 1100, 1200, 1950, 1450, 1350, 1950, 1700, 2200];
+        trafficChart.update();
+    } else if (e.target.id === "weeklyButton") {
+        trafficData.labels = ["9-15","16-22", "23-29", "30-5", "6-12", "13-19", "20-26", "27-3", "4-10", "11-17", "18-24", "25-31"];
+        trafficData.datasets[0].data = [900, 750, 1250, 1000, 2000, 1500, 1750, 1250, 1850, 2250, 1500, 2500];
+        trafficChart.update();
+    } else if (e.target.id === "monthlyButton") {
+        trafficData.labels = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+        trafficData.datasets[0].data = [450, 1050, 800, 1800, 2200, 650, 2250, 1650, 2450, 1800, 2300, 2200];
+        trafficChart.update();
+    }
     }
 });
 
