@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>WebApp Dashboard</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.css">
+    <link type="text/css" rel="stylesheet" href="css/toggle-switch.css">
     <link type="text/css" rel="stylesheet" href="css/style.css">
 </head>
 <body class="grid-container">
@@ -399,10 +400,39 @@
         <section class="settings">
             <h3 class="section-header">Settings</h3>
 
-            <!-- Custom CSS toggle code -->
-
-            <!-- Custom CSS toggle code -->
-
+            <!-- Email Notification Switch -->
+            <div class="switch-container">
+                <p class="setting-text">
+                    Send Email Notifications
+                </p>
+                <label class="switch-light switch-ios" onclick="">
+                    <input type="checkbox">
+                
+                    
+                
+                    <span>
+                    <span>Off</span>
+                    <span>On</span>
+                    <a></a>
+                    </span>
+                </label>
+            </div>   
+                <!-- Set Profile to Public Switch -->
+            <div class="switch-container">
+                <p class="setting-text">
+                    Set Profile to Public
+                </p>
+                <label class="switch-light switch-ios" onclick="">
+                    <input type="checkbox">
+        
+                
+                    <span>
+                    <span>Off</span>
+                    <span>On</span>
+                    <a></a>
+                    </span>
+                </label>
+            </div>
             <div class="settings-container">
                 <select class="timezone-select" id="timezone">
                     <option disabled selected>Select a Timezone</option>

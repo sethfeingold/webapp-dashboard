@@ -298,13 +298,14 @@ header {
 }
 
 #userField, #messageField, #sendButton {
-    margin-top: 10px;
+    margin-top: 15px;
     border: 1px solid rgb(114, 114, 114);
     border-radius: 5px;
     color: rgb(114, 114, 114);
     padding: 10px 10px;
     width: 100%;
 }
+
 
 #messageField {
     height: 100px;
@@ -368,6 +369,20 @@ header {
 .save-button:hover, .cancel-button:hover {
     cursor: pointer;
     opacity: .8;
+}
+
+.switch-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.switch-light {
+    width: 70%;
+}
+
+.setting-text {
+    padding: 10px;
 }
 
 /* CSS Grid */
@@ -443,22 +458,12 @@ header {
         margin: 20px 0;
     }
 
-    .settings-container {
-        height: 198px;
-        display: flex;
-        justify-content: space-between;
-    }
-
-    #timezone {
-        margin-top: 10px;
-    }
-
-    #timezone, .save-button, .cancel-button {
-        margin-bottom: 0;
-    }
-
     #searchbox {
         width: 300px;
+    }
+
+    #userField, #messageField, #sendButton {
+        margin-top: 23px;
     }
 }
 
@@ -482,5 +487,9 @@ header {
 
     #searchbox {
         width: 500px;
+    }
+    
+    #userField, #messageField, #sendButton {
+        margin-top: 25px;
     }
 }
