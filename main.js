@@ -318,17 +318,28 @@ cancelButton.addEventListener('click', () => {
 
 // *** Toggle switch settings
 
-// const emailToggle = document.getElementById("email-toggle");
-// const privacyToggle = document.getElementById("privacy-toggle");
-// let emailClickCounter = 0;
-// let privacyClickCounter = 0;
+const emailToggle = document.getElementById("email-toggle");
+const privacyToggle = document.getElementById("privacy-toggle");
+let emailClickCounter = 0;
+let privacyClickCounter = 0;
 
-// emailToggle.addEventListener('click', () => {
-//     emailClickCounter++;
-//     console.log(emailClickCounter);
-// });
+emailToggle.addEventListener('click', () => {
+    emailClickCounter++;
+    if (emailClickCounter%2 !== 0) {
+        emailToggle.outerHTML = '<input type="checkbox" id="email-toggle" checked>';
+    } else if (emailClickCounter%2 == 0) {
+        emailToggle.outerHTML = '<input type="checkbox" id="email-toggle">';
+    }
+    console.log(emailClickCounter);
+});
 
 // privacyToggle.addEventListener('click', () => {
 //     privacyClickCounter++;
-//     console.log(privacyClickCounter);
+//     if (privacyClickCounter%2 !== 0) {
+//         privacyToggle.setAttribute("checked", true);
+//         console.log(privacyToggle.outerHTML);
+//     } else {
+//         privacyToggle.setAttribute("checked", false);
+//         console.log(privacyToggle.outerHTML);
+//     }
 // });
