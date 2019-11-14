@@ -10,6 +10,7 @@ const notificationTray = document.getElementById("notifications");
 const bellIndicator = document.getElementById("bell-indicator");
 const trafficLI = document.getElementsByClassName("traffic-nav-link");
 const trafficNav = document.getElementById("trafficNav");
+
 // Traffic Data Line Chart
 
 let trafficData = {
@@ -290,3 +291,44 @@ function moveCursor(pos) {
 
 // Storing settings in local storage
 
+const saveButton = document.getElementById("save-button");
+const cancelButton = document.getElementById("cancel-button");
+const timezone = document.getElementById("timezone");
+let timezoneSelection = timezone.value;
+let lastSelection = localStorage.getItem("timezoneSelection");
+
+// *** Timezone settings
+
+if (lastSelection) {
+    timezone.value = lastSelection;
+}
+
+//save timezone settings with save button
+
+saveButton.addEventListener('click', () => {    
+    lastSelection = timezone.value;
+    localStorage.setItem("timezoneSelection", lastSelection);  
+})
+
+//revert to previously saved timezone settings with cancel button
+
+cancelButton.addEventListener('click', () => {
+    timezone.value = lastSelection;
+})
+
+// *** Toggle switch settings
+
+// const emailToggle = document.getElementById("email-toggle");
+// const privacyToggle = document.getElementById("privacy-toggle");
+// let emailClickCounter = 0;
+// let privacyClickCounter = 0;
+
+// emailToggle.addEventListener('click', () => {
+//     emailClickCounter++;
+//     console.log(emailClickCounter);
+// });
+
+// privacyToggle.addEventListener('click', () => {
+//     privacyClickCounter++;
+//     console.log(privacyClickCounter);
+// });
