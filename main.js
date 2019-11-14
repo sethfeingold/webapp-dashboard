@@ -200,6 +200,14 @@ send.addEventListener('click', () => {
 let members = ["Victoria Chambers", "Dale Byrd", "Dawn Wood", "Dan Oliver"];
 let results = document.getElementById("autoCompleteResults");
 let matches = [];
+let resultsCursor = 0;
+
+user.addEventListener('keydown', (e) => {
+    if (e.keyCode == '13' || e.keyCode == '38' || e.keyCode == '40') {
+        e.preventDefault();
+    }
+});
+
 
 user.addEventListener('keyup', (e) => {
     results.innerHTML = "";
@@ -212,13 +220,39 @@ user.addEventListener('keyup', (e) => {
             displayMatches(matches);
         }
     }
+
+    if (results.classList.contains("visible")) {
+        switch( event.keyCode ) {
+            case 13:
+                user.value = results.children[resultsCursor].innerHTML;
+                toggleResults("hide");
+                resultsCursor = 0;
+                break;
+            case 38:
+                if (resultsCursor > 0) {
+                    resultsCursor--;
+
+                    moveCursor(resultsCursor);
+                }
+                break;
+            case 40:
+                    if (resultsCursor < (matches.length - 1)) {
+                        resultsCursor++;
+    
+                        moveCursor(resultsCursor);
+                    }
+                break;
+        }
+    }
 })
 
 function toggleResults(action) {
     if (action == "show") {
+        results.classList.remove("hide");
         results.classList.add("visible");
     } else if (action == "hide") {
         results.classList.remove("visible");
+        results.classList.add("hide");
     }
 }
 
@@ -240,5 +274,19 @@ function displayMatches(matchList) {
         results.innerHTML += '<li class="result">' + matchList[j] + '</li>';
         j++;
     }
+    moveCursor(resultsCursor);
     toggleResults("show");
 }
+
+function moveCursor(pos) {
+    for (let i = 0; i < results.children.length; i++) {
+        results.children[i].classList.remove("highlighted");
+    }
+
+    results.children[pos].classList.add("highlighted");
+}
+
+
+
+// Storing settings in local storage
+

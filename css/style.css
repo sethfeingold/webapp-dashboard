@@ -28,6 +28,10 @@ h3 {
     color: rgb(114, 114, 114);
 }
 
+.hide {
+    display: none;
+}
+
 /* Header Styles */
 
 header {
@@ -348,10 +352,15 @@ header {
 
 .result {
     padding: 5px;
-    color: white;
-    background: #573a9b;
+    color: #573a9b;
+    background: rgb(200, 200, 200);
     border-radius: 5px;
     margin: 5px auto;
+}
+
+.highlighted {
+    color: white;
+    background: #573a9b;
 }
 
 /* Settings Section Styling */
