@@ -2,7 +2,7 @@ const pageAlert = document.getElementById("alert");
 const trafficCanvas = document.getElementById("traffic-chart");
 const dailyCanvas = document.getElementById("daily-traffic-chart");
 const mobileCanvas = document.getElementById("mobile-users-chart");
-const user = document.getElementById("userField");
+const user = document.querySelector(".user-search");
 const message = document.getElementById("messageField");
 const send = document.getElementById("sendButton");
 const notificationBell = document.getElementById("bell-icon");
@@ -10,7 +10,6 @@ const notificationTray = document.getElementById("notifications");
 const bellIndicator = document.getElementById("bell-indicator");
 const trafficLI = document.getElementsByClassName("traffic-nav-link");
 const trafficNav = document.getElementById("trafficNav");
-
 // Traffic Data Line Chart
 
 let trafficData = {
@@ -195,3 +194,51 @@ send.addEventListener('click', () => {
     alert(`Message successfully sent to: ${user.value}`);
     }
 });
+
+// Autocomplete feature for messaging widget
+
+let members = ["Victoria Chambers", "Dale Byrd", "Dawn Wood", "Dan Oliver"];
+let results = document.getElementById("autoCompleteResults");
+let matches = [];
+
+user.addEventListener('keyup', (e) => {
+    results.innerHTML = "";
+    toggleResults("hide");
+
+    if (user.value.length > 0) {
+        matches = getMatches(user.value);
+
+        if (matches.length > 0) {
+            displayMatches(matches);
+        }
+    }
+})
+
+function toggleResults(action) {
+    if (action == "show") {
+        results.classList.add("visible");
+    } else if (action == "hide") {
+        results.classList.remove("visible");
+    }
+}
+
+function getMatches(inputText) {
+    let matchList = [];
+
+    for (let i = 0; i < members.length; i++) {
+        if (members[i].toLowerCase().indexOf(inputText.toLowerCase()) != -1) {
+            matchList.push(members[i]);
+        }
+    }
+    return matchList;
+}
+
+function displayMatches(matchList) {
+    let j = 0;
+
+    while (j < matchList.length) {
+        results.innerHTML += '<li class="result">' + matchList[j] + '</li>';
+        j++;
+    }
+    toggleResults("show");
+}

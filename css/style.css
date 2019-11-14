@@ -321,7 +321,7 @@ header {
     justify-content: center;
 }
 
-#userField, #messageField, #sendButton {
+.user-search, #messageField, #sendButton {
     margin-top: 15px;
     border: 1px solid rgb(114, 114, 114);
     border-radius: 5px;
@@ -329,7 +329,6 @@ header {
     padding: 10px 10px;
     width: 100%;
 }
-
 
 #messageField {
     height: 100px;
@@ -345,6 +344,14 @@ header {
 #sendButton:hover {
     cursor: pointer;
     opacity: .8;
+}
+
+.result {
+    padding: 5px;
+    color: white;
+    background: #573a9b;
+    border-radius: 5px;
+    margin: 5px auto;
 }
 
 /* Settings Section Styling */
@@ -490,7 +497,7 @@ header {
         width: 300px;
     }
 
-    #userField, #messageField, #sendButton {
+    .user-search, #messageField, #sendButton {
         margin-top: 23px;
     }
 }
@@ -517,7 +524,7 @@ header {
         width: 500px;
     }
 
-    #userField, #messageField, #sendButton {
+    .user-search, #messageField, #sendButton {
         margin-top: 25px;
     }
 }
