@@ -478,6 +478,10 @@ header {
     .traffic-nav li {
         margin: 10px 25px 10px 0;
     }
+
+    #searchbox {
+        width: 300px;
+    }
 }
 
 @media (min-width: 768px) {
@@ -534,10 +538,6 @@ header {
 
     .message {
         border-right: 1px solid rgb(170, 170,170, 0.3);
-    }
-
-    #searchbox {
-        width: 300px;
     }
 
     .user-search, #messageField, #sendButton {
