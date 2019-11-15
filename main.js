@@ -320,26 +320,35 @@ cancelButton.addEventListener('click', () => {
 
 const emailToggle = document.getElementById("email-toggle");
 const privacyToggle = document.getElementById("privacy-toggle");
-let emailClickCounter = 0;
-let privacyClickCounter = 0;
+let lastEmailPreference = localStorage.getItem("emailPreference");
+let lastPrivacyPreference = localStorage.getItem("privacyPreference");
 
-emailToggle.addEventListener('click', () => {
-    emailClickCounter++;
-    if (emailClickCounter%2 !== 0) {
-        emailToggle.outerHTML = '<input type="checkbox" id="email-toggle" checked>';
-    } else if (emailClickCounter%2 == 0) {
-        emailToggle.outerHTML = '<input type="checkbox" id="email-toggle">';
-    }
-    console.log(emailClickCounter);
+// email preferences saved when save button is clicked, reverted when cancel button is clicked
+
+if (lastEmailPreference) {
+    emailToggle.checked = JSON.parse(lastEmailPreference);
+};
+
+saveButton.addEventListener('click', () => {
+    lastEmailPreference = emailToggle.checked;
+    localStorage.setItem("emailPreference", lastEmailPreference);
 });
 
-// privacyToggle.addEventListener('click', () => {
-//     privacyClickCounter++;
-//     if (privacyClickCounter%2 !== 0) {
-//         privacyToggle.setAttribute("checked", true);
-//         console.log(privacyToggle.outerHTML);
-//     } else {
-//         privacyToggle.setAttribute("checked", false);
-//         console.log(privacyToggle.outerHTML);
-//     }
-// });
+cancelButton.addEventListener('click', () => {
+    emailToggle.checked = JSON.parse(lastEmailPreference);
+})
+
+// privacy preferences saved when save button is clicked, reverted when cancel button is clicked
+
+if (lastPrivacyPreference) {
+    privacyToggle.checked = JSON.parse(lastPrivacyPreference);
+};
+
+saveButton.addEventListener('click', () => {
+    lastPrivacyPreference = privacyToggle.checked;
+    localStorage.setItem("privacyPreference", lastPrivacyPreference);
+});
+
+cancelButton.addEventListener('click', () => {
+    privacyToggle.checked = JSON.parse(lastPrivacyPreference);
+})
