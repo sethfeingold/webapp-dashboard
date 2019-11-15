@@ -139,19 +139,27 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 20px;
+    margin-bottom: 20px;
+    background: rgb(246, 246, 246);
 }
 
 .headline {
     font-weight: 200;
     color: rgb(114, 114, 114);
+    border-right: 1px solid rgb(170, 170,170, 0.3);
+    padding: 25px 10px;
+    background: white;
+}
+
+.searchbar {
+    padding: 20px;
 }
 
 #searchbox {
     height: 25px;
     border: 1px solid rgb(200, 200, 200);
     border-radius: 5px;
-    padding: 0.8rem;
+    padding: 10px;
 }
 
 /* Alert Styles */
@@ -185,10 +193,6 @@ header {
 
 .traffic-header {
     color: rgb(114, 114, 114);
-    display: flex;
-    align-content: center;
-    justify-content: space-between;
-    margin: 20px;
 }
 
 .traffic-nav {
@@ -196,8 +200,8 @@ header {
 }
 
 .traffic-nav li {
-    margin-left: 5px;
-    padding: 5px;
+    margin: 10px auto 10px;
+    padding: 10px;
     border-radius: 5px;
 }
 
@@ -226,16 +230,24 @@ header {
 /* Daily Traffic Bar Graph Styles */
 
 .daily-traffic {
-    margin: 20px;
+    padding: 20px;
+    border-top: 1px solid rgb(170, 170,170, 0.3);
 }
 
 /* Mobile Users Donut Graph Styles */
 
 .mobile-users {
-    margin: 20px;
+    padding: 20px;
+    border-top: 1px solid rgb(170, 170,170, 0.3);
+    border-bottom: 1px solid rgb(170, 170,170, 0.3);
 }
 
 /* Social Stats Section Styles */
+
+.social-stats {
+    padding-bottom: 40px;
+    border-bottom: 1px solid rgb(170, 170,170, 0.3);
+}
 
 #social-stats-container {
     display: flex;
@@ -279,7 +291,8 @@ header {
 /* New Members Section Styling & Recent Activity */
 
 #new-members, #recent-activity {
-    margin: 20px;
+    padding: 20px;
+    border-bottom: 1px solid rgb(170, 170,170, 0.3);
 }
 
 #new-members h3, #recent-activity h3 {
@@ -455,7 +468,24 @@ header {
 
 /* Media Queries for Tablet and Desktop Viewing */
 
+@media (min-width: 420px) {
+    .traffic-header {
+        display: flex;
+        justify-content: space-between;
+        align-content: flex-end;
+    }
+
+    .traffic-nav li {
+        margin: 10px 25px 10px 0;
+    }
+}
+
 @media (min-width: 768px) {
+
+    .daily-traffic {
+        border-right: 1px solid rgb(170, 170,170, 0.3);
+        border-bottom: 1px solid rgb(170, 170,170, 0.3);
+    }
 
     .grid-container {
         grid-template-columns: 55px 1fr;
@@ -498,8 +528,12 @@ header {
         width: 40vw;
     }
 
-    .social-stats {
-        margin: 20px 0;
+    #new-members {
+        border-right: 1px solid rgb(170, 170,170, 0.3);
+    }
+
+    .message {
+        border-right: 1px solid rgb(170, 170,170, 0.3);
     }
 
     #searchbox {
