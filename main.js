@@ -347,6 +347,7 @@ if (lastPrivacyPreference) {
 saveButton.addEventListener('click', () => {
     lastPrivacyPreference = privacyToggle.checked;
     localStorage.setItem("privacyPreference", lastPrivacyPreference);
+    alert("Your settings have been saved successfully");
 });
 
 cancelButton.addEventListener('click', () => {
