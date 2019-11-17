@@ -376,6 +376,12 @@ header {
     background: #573a9b;
 }
 
+.search-container {
+    display: flex;
+    justify-content: flex-start;
+    width: 98%;
+}
+
 /* Settings Section Styling */
 
 .settings-container {
